@@ -1,0 +1,55 @@
+.TH PASS-LOGIN 1 "2022 May 28" "pass-login"
+
+.SH NAME
+pass-login \- A \fBpass\fP(1) extension that provides an easy flow for getting account names.
+
+.SH SYNOPSIS
+\fBpass login\fP [command] [options] \fIpass-name\fP
+
+.SH DESCRIPTION
+\fBpass-login\fP helps get account name easily. 
+
+When no command is specified, command defaults to \fBshow\fP.
+
+The following information is taken as account name by \fBpass-login\fP, sorted by priority. 
+
+.RS
+.nf
+- Field \fBlogin\fP in password file. 
+- Field \fBLogin\fP in password file.
+- Field \fBusername\fP in password file.
+- Field \fBUsername\fP in password file.
+- The \fBfile name\fP of password file.
+.RE
+
+.SH COMMANDS
+.TP
+\fBshow\fP [ \fI--clip\fP, \fI-c\fP ] \fIpass-name\fP
+Decrypt and print the login account named \fIpass-name\fP. If \fI\-\-clip\fP or \fI\-c\fP is specified, do not print the login account name but instead copy the account name and then restore the clipboard for serveral seconds. The behavior of clipping is consistent to \fBpass\fP(1).
+
+.SH SEE ALSO
+.BR pass (1),
+.BR pass-import (1),
+.BR pass-otp (1)
+
+.SH AUTHORS
+.B pass login
+was written by 
+.MT hi@gxlin.org
+Guangxiong Lin
+.ME .
+
+.SH COPYING
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
