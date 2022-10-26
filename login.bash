@@ -22,7 +22,7 @@ cmd_login_usage () {
     cat <<-_EOF
 Usage: 
 
-    $PROGRAM login [show] [--clip,-c] pass-name
+    $PROGRAM login [--clip,-c] pass-name
         Show existing username and optionally put it on the clipboard.
         If put on the clipboard, it will be cleared in 45 seconds.
     $PROGRAM help
