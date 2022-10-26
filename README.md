@@ -3,6 +3,7 @@
 A [pass](https://www.passwordstore.org/) extension for extracting usernames.
 
 The extension looks for the following fields by order:
+
 - The second column in any line beginning with `login:`, `Login:`,
   `Username:`, `username:`.
 - The path of the pass file.
